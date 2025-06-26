@@ -33,9 +33,8 @@ const Leadership = () => {
         Leadership & Extracurriculars
       </h2>
       
-      {/* First two cards in a row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        {activities.slice(0, 2).map((activity, index) => (
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {activities.map((activity, index) => (
           <div 
             key={index}
             className="bg-gray-800/50 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-700 p-8 hover:shadow-blue-500/20 transition-all duration-700 hover:scale-105 text-center animate-fade-in transform-gpu"
@@ -49,23 +48,6 @@ const Leadership = () => {
             <p className="text-gray-300 text-sm leading-relaxed">{activity.description}</p>
           </div>
         ))}
-      </div>
-      
-      {/* Third card centered */}
-      <div className="flex justify-center">
-        <div className="max-w-md w-full">
-          <div 
-            className="bg-gray-800/50 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-700 p-8 hover:shadow-blue-500/20 transition-all duration-700 hover:scale-105 text-center animate-fade-in transform-gpu"
-            style={{ animationDelay: '0.4s' }}
-          >
-            <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${activities[2].gradient} rounded-2xl flex items-center justify-center shadow-lg`}>
-              <activities[2].icon className="text-white" size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">{activities[2].title}</h3>
-            <p className="text-blue-400 font-medium mb-4">{activities[2].organization}</p>
-            <p className="text-gray-300 text-sm leading-relaxed">{activities[2].description}</p>
-          </div>
-        </div>
       </div>
     </section>
   );
