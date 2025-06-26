@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import About from '../components/About';
+import ZohoExperience from '../components/ZohoExperience';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
@@ -18,6 +19,7 @@ const Index = () => {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-32">
           <About />
+          <ZohoExperience />
           <Education />
           <Experience />
           <Projects />

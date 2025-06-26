@@ -9,11 +9,9 @@ const About = () => {
           About Me
         </h2>
         <p className="text-lg text-gray-300 leading-relaxed text-center max-w-4xl mx-auto">
-          I'm an AI/ML and web development enthusiast who builds intelligent and user-friendly applications. 
-          Currently pursuing my BE in Computer Science at KPR Institute of Engineering and Technology, 
-          I'm passionate about solving real-world problems using AI and contributing to open-source projects. 
-          With hands-on experience in machine learning, web development, and mobile app development, 
-          I strive to create innovative solutions that make a meaningful impact.
+          Building tomorrow's technology today! I'm passionate about creating intelligent solutions that make a real difference. 
+          From AI-powered applications to sleek iOS experiences, I turn complex problems into elegant, user-friendly innovations. 
+          Currently pursuing Computer Science at KPR Institute of Engineering and Technology, I believe in the power of code to create extraordinary moments.
         </p>
       </div>
     </section>

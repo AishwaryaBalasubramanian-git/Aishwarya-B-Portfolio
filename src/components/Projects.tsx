@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, ExternalLink, Github, Star } from 'lucide-react';
+import { Code, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -39,26 +39,21 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div 
             key={index}
-            className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700 p-6 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:border-blue-500/50 cursor-pointer animate-fade-in"
+            className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700 p-6 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:border-blue-500/50 animate-fade-in"
             style={{ animationDelay: `${index * 0.2}s` }}
           >
             <div className="flex items-start justify-between mb-6">
               <div className={`p-3 bg-gradient-to-br ${project.gradient} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
                 <Code className="text-white" size={24} />
               </div>
-              <div className="flex gap-2">
-                <a 
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110"
-                >
-                  <Github className="text-gray-300 hover:text-white" size={18} />
-                </a>
-                <div className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110">
-                  <ExternalLink className="text-gray-300 hover:text-blue-400" size={18} />
-                </div>
-              </div>
+              <a 
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110 group"
+              >
+                <Github className="text-gray-300 group-hover:text-white" size={18} />
+              </a>
             </div>
             
             <div className="mb-3">
@@ -75,7 +70,7 @@ const Projects = () => {
               {project.description}
             </p>
             
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.map((tech, techIndex) => (
                 <span 
                   key={techIndex}
@@ -86,10 +81,10 @@ const Projects = () => {
               ))}
             </div>
             
-            <div className="mt-4 pt-4 border-t border-gray-700/50 flex items-center justify-between">
+            <div className="pt-4 border-t border-gray-700/50 flex items-center justify-between">
               <div className="flex items-center gap-2 text-gray-400 text-xs">
-                <Star size={14} />
-                <span>Featured Project</span>
+                <Github size={14} />
+                <span>Open Source</span>
               </div>
               <span className="text-xs text-gray-500">View on GitHub</span>
             </div>
