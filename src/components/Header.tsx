@@ -4,13 +4,13 @@ import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-gray-900/95 backdrop-blur-sm shadow-2xl border-b border-gray-700">
+    <header className="bg-gray-900/95 backdrop-blur-sm shadow-2xl sticky top-0 z-50 border-b border-gray-700">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <div className="relative">
               <img 
-                src="/lovable-uploads/4c3506b2-3431-4ff7-b68c-7c12714cba38.png"
+                src="/lovable-uploads/75178c06-9e2c-4a39-91c6-0e0908d99913.png"
                 alt="Aishwarya B"
                 className="w-32 h-32 rounded-full object-cover border-4 border-blue-500/50 shadow-xl hover:scale-105 transition-transform duration-300"
               />
