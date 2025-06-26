@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Certifications from '../components/Certifications';
 import Leadership from '../components/Leadership';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -15,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 scroll-smooth">
       <Header />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-24">
+        <div className="space-y-32">
           <About />
           <Education />
           <Experience />
@@ -23,6 +24,7 @@ const Index = () => {
           <Skills />
           <Certifications />
           <Leadership />
+          <Contact />
         </div>
       </main>
       <Footer />
