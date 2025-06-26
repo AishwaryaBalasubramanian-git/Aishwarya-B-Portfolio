@@ -12,16 +12,18 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 scroll-smooth">
       <Header />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Certifications />
-        <Leadership />
+        <div className="space-y-24">
+          <About />
+          <Education />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Certifications />
+          <Leadership />
+        </div>
       </main>
       <Footer />
     </div>

@@ -1,45 +1,50 @@
 
 import React from 'react';
-import { Users, Star } from 'lucide-react';
+import { Users, Trophy, Megaphone } from 'lucide-react';
 
 const Leadership = () => {
   const activities = [
     {
       title: "Executive Member",
       organization: "Software Development Club",
-      description: "Leading software development initiatives and mentoring junior members"
+      icon: Users,
+      description: "Leading technical initiatives and mentoring fellow students in software development projects.",
+      gradient: "from-blue-500 to-purple-600"
     },
     {
-      title: "Anti-Drug Campaign Ambassador", 
+      title: "Anti-Drug Campaign Ambassador",
       organization: "Community Outreach",
-      description: "Spreading awareness about drug prevention in educational institutions"
+      icon: Megaphone,
+      description: "Advocating for drug-free communities and organizing awareness campaigns.",
+      gradient: "from-green-500 to-teal-600"
     },
     {
-      title: "Marketing Lead",
+      title: "Marketing Lead", 
       organization: "IEEE Educational Society",
-      description: "Managing marketing strategies and promotional activities for technical events"
+      icon: Trophy,
+      description: "Driving marketing strategies and promoting educational technology initiatives.",
+      gradient: "from-orange-500 to-red-600"
     }
   ];
 
   return (
     <section className="py-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Leadership & Extracurriculars</h2>
-      <div className="space-y-6">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Leadership & Extracurriculars
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {activities.map((activity, index) => (
           <div 
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700 p-8 hover:shadow-blue-500/10 transition-all duration-500 hover:scale-105 text-center animate-fade-in"
+            style={{ animationDelay: `${index * 0.2}s` }}
           >
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-yellow-100 rounded-full">
-                <Star className="text-yellow-600" size={24} />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-bold text-gray-900 mb-1">{activity.title}</h3>
-                <p className="text-blue-600 font-medium mb-2">{activity.organization}</p>
-                <p className="text-gray-700 text-sm">{activity.description}</p>
-              </div>
+            <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${activity.gradient} rounded-2xl flex items-center justify-center`}>
+              <activity.icon className="text-white" size={32} />
             </div>
+            <h3 className="text-xl font-bold text-white mb-2">{activity.title}</h3>
+            <p className="text-blue-400 font-medium mb-4">{activity.organization}</p>
+            <p className="text-gray-300 text-sm leading-relaxed">{activity.description}</p>
           </div>
         ))}
       </div>

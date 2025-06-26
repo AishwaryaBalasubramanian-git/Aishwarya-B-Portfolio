@@ -1,64 +1,97 @@
 
 import React from 'react';
-import { Code, ExternalLink } from 'lucide-react';
+import { Code, ExternalLink, Github, Star } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Dysgraphia Detection System",
-      description: "CNN & ViT based handwriting analysis for early detection of dysgraphia",
-      tech: "Python, TensorFlow, Computer Vision"
-    },
-    {
-      title: "Django Research Data Management System", 
-      description: "Comprehensive system for managing research data with advanced analytics",
-      tech: "Django, PostgreSQL, Python"
+      title: "Resume Classification using K-NN & One-vs-Rest",
+      description: "Advanced machine learning system for automated resume classification using K-Nearest Neighbors algorithm combined with One-vs-Rest strategy for multi-class classification. Implements sophisticated text processing and feature extraction techniques.",
+      tech: ["Python", "Scikit-learn", "NLP", "Machine Learning"],
+      github: "https://github.com/AishwaryaBalasubramanian-git/Resume-Classification-using-K-Nearest-Neighbors-and-One-vs-Rest-Strategy",
+      category: "Machine Learning",
+      gradient: "from-green-400 to-emerald-600"
     },
     {
       title: "LearnSpace iOS App",
-      description: "Educational mobile application built with modern iOS frameworks",
-      tech: "SwiftUI, Firebase, iOS"
+      description: "Comprehensive educational mobile application built with modern iOS frameworks. Features interactive learning modules, progress tracking, and seamless user experience with SwiftUI and Firebase integration.",
+      tech: ["SwiftUI", "Firebase", "iOS", "Authentication"],
+      github: "https://github.com/AishwaryaBalasubramanian-git/learnspace101",
+      category: "Mobile Development",
+      gradient: "from-blue-400 to-purple-600"
     },
     {
       title: "Pomodoro Focus Music App",
-      description: "Productivity app combining Pomodoro technique with focus-enhancing music",
-      tech: "iOS, Swift, Audio Processing"
-    },
-    {
-      title: "Smile-Activated Donation System",
-      description: "Innovative donation system using facial recognition to detect smiles",
-      tech: "OpenCV, Flask, Computer Vision"
-    },
-    {
-      title: "Interactive Quiz Website",
-      description: "Dynamic quiz platform with real-time scoring and user engagement",
-      tech: "HTML, CSS, JavaScript"
+      description: "Innovative productivity application combining the Pomodoro technique with focus-enhancing music. Features customizable timer settings, ambient soundscapes, and productivity analytics to boost work efficiency.",
+      tech: ["iOS", "Swift", "Audio Processing", "UI/UX"],
+      github: "https://github.com/AishwaryaBalasubramanian-git/pomo",
+      category: "Productivity",
+      gradient: "from-orange-400 to-red-600"
     }
   ];
 
   return (
     <section className="py-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Featured Projects
+      </h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div 
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group"
+            className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700 p-6 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:border-blue-500/50 cursor-pointer animate-fade-in"
+            style={{ animationDelay: `${index * 0.2}s` }}
           >
-            <div className="flex items-start justify-between mb-4">
-              <div className="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors">
-                <Code className="text-blue-600" size={24} />
+            <div className="flex items-start justify-between mb-6">
+              <div className={`p-3 bg-gradient-to-br ${project.gradient} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
+                <Code className="text-white" size={24} />
               </div>
-              <ExternalLink className="text-gray-400 group-hover:text-blue-600 transition-colors" size={20} />
+              <div className="flex gap-2">
+                <a 
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110"
+                >
+                  <Github className="text-gray-300 hover:text-white" size={18} />
+                </a>
+                <div className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110">
+                  <ExternalLink className="text-gray-300 hover:text-blue-400" size={18} />
+                </div>
+              </div>
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+            
+            <div className="mb-3">
+              <span className={`text-xs px-3 py-1 rounded-full bg-gradient-to-r ${project.gradient} text-white font-medium`}>
+                {project.category}
+              </span>
+            </div>
+            
+            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
               {project.title}
             </h3>
-            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+            
+            <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-4">
               {project.description}
             </p>
-            <div className="bg-gray-50 px-3 py-2 rounded-lg">
-              <p className="text-xs text-gray-600 font-medium">{project.tech}</p>
+            
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((tech, techIndex) => (
+                <span 
+                  key={techIndex}
+                  className="text-xs px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full border border-gray-600 hover:border-blue-500/50 transition-colors duration-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <div className="mt-4 pt-4 border-t border-gray-700/50 flex items-center justify-between">
+              <div className="flex items-center gap-2 text-gray-400 text-xs">
+                <Star size={14} />
+                <span>Featured Project</span>
+              </div>
+              <span className="text-xs text-gray-500">View on GitHub</span>
             </div>
           </div>
         ))}

@@ -5,27 +5,29 @@ import { GraduationCap, Calendar } from 'lucide-react';
 const Education = () => {
   return (
     <section className="py-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Education</h2>
-      <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-        <div className="flex items-start gap-4">
-          <div className="p-3 bg-blue-100 rounded-full">
-            <GraduationCap className="text-blue-600" size={24} />
+      <h2 className="text-3xl font-bold text-white mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Education
+      </h2>
+      <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700 p-8 hover:shadow-blue-500/10 transition-all duration-500">
+        <div className="flex items-start gap-6">
+          <div className="p-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl">
+            <GraduationCap className="text-white" size={32} />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              BE in Computer Science and Engineering (AI & ML)
+            <h3 className="text-2xl font-bold text-white mb-2">
+              Bachelor of Engineering in Computer Science and Engineering (AI & ML)
             </h3>
-            <p className="text-blue-600 font-medium mb-2">
+            <p className="text-blue-400 font-medium text-lg mb-3">
               KPR Institute of Engineering and Technology
             </p>
-            <div className="flex flex-wrap gap-4 text-gray-600">
-              <div className="flex items-center gap-2">
-                <Calendar size={16} />
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-2 text-gray-300">
+                <Calendar size={18} />
                 <span>Expected graduation: May 2026</span>
               </div>
-              <div className="bg-green-100 px-3 py-1 rounded-full">
-                <span className="text-green-800 font-medium">CGPA: 8.53</span>
-              </div>
+            </div>
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-lg inline-block font-bold">
+              CGPA: 8.53
             </div>
           </div>
         </div>
