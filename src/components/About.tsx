@@ -12,7 +12,7 @@ const About = () => {
           Full-stack developer passionate about crafting elegant solutions across the entire tech stack! 
           From building intelligent ML models and robust backend APIs to creating seamless mobile experiences and intuitive web interfaces, 
           I thrive on turning complex problems into user-friendly innovations. With expertise spanning 
-          <span className="text-blue-400 font-medium"> machine learning, database architecture, cloud infrastructure, </span>
+          <span className="text-blue-400 font-medium"> machine learning, database architecture, </span>
           and <span className="text-purple-400 font-medium">mobile development</span>, 
           I'm currently pursuing Computer Science at KPR Institute, always eager to learn and build something extraordinary.
         </p>
