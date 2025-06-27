@@ -17,7 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 scroll-smooth">
       <Header />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-32">
+        <div className="space-y-16 transition-all duration-500">
           <About />
           <ZohoExperience />
           <Education />
