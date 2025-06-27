@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex justify-center mb-6">
             <div className="relative">
               <img 
-                src="/lovable-uploads/4c3506b2-3431-4ff7-b68c-7c12714cba38.png"
+                src="/lovable-uploads/a9b5097a-2da7-4435-b346-1c75a36462d6.png"
                 alt="Aishwarya B"
                 className="w-32 h-32 rounded-full object-cover border-4 border-blue-500/50 shadow-xl hover:scale-105 transition-transform duration-300"
               />
